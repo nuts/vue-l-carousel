@@ -73,13 +73,8 @@
 	import { $ } from './util';
 
 	/* eslint no-nested-ternary: 0 */
-	const win = window,
-		{
-			navigator,
-			String,
-			Number,
-			Boolean,
-		} = win,
+	const win = typeof window === 'undefined' ? {} : window,
+		navigator = win.navigator || {},
 		ua = navigator.userAgent || navigator.appVersion,
 		vendor = (/webkit/i).test(ua) ? 'webkit' : (/firefox/i).test(ua) ? 'moz' : 'opera' in win ? 'o' : '',
 		cssVendor = vendor ? `-${vendor.toLowerCase()}-` : '',

@@ -1,5 +1,5 @@
 /* global getComputedStyle window */
-const win = window,
+const win = typeof window === 'undefined' ? {} : window,
 	simpleSelectorRE = /^[\w-]*$/,
 	cssNumber = {
 		'column-count': 1,
