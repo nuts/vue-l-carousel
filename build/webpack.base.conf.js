@@ -18,6 +18,7 @@ module.exports = {
 	output: {
 		path: config.path.demoJS,
 		filename: '[name].js',
+		globalObject: 'this',
 	},
 	resolve: {
 		extensions: ['.js', '.vue'],
